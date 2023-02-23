@@ -27,5 +27,4 @@ public class Grade {
     public Grade(){
         this.id = UUID.randomUUID().toString();
     }
-
 }
