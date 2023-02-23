@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Form</title>
+  <link th:href="@{/form-stylesheet.css}" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="topnav">
+  <a>Form</a>
+  <a>Grades</a>
+</div>
+
+<div class="container">
+
+  <h2>Grade Portal</h2>
+  <form method="post" th:object="${grade}" th:action="@{/submit}">
+    <p style="color:red" th:errors="*{name}"></p>
+    <input type="text" placeholder="Name" th:field="*{name}">
+    <p style="color:red" th:errors="*{score}"></p>
+    <input type="text" placeholder="Score" th:field="*{score}">
+    <p style="color:red" th:errors="*{subject}"></p>
+    <input type="text" placeholder="Subject" th:field="*{subject}">
+    <input type="hidden" th:field="*{id}" r>
+    <br><br>
+    <input type="submit" value="Submit Grade" class="update">
+  </form>
+
+</div>
+
+
+</body>
+
+</html>
