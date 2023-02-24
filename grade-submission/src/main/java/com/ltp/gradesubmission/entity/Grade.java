@@ -1,16 +1,13 @@
-package com.ltp.gradesubmission;
+package com.ltp.gradesubmission.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import com.ltp.gradesubmission.validations.Score;
+import lombok.*;
 
 import javax.validation.constraints.NotBlank;
 import java.util.UUID;
 
 @Getter
 @Setter
-@AllArgsConstructor
 @ToString
 public class Grade {
 
@@ -24,7 +21,15 @@ public class Grade {
     private String score;
     private String id;
 
+    public Grade(String name, String subject, String score){
+        this.name = name;
+        this.subject = subject;
+        this.score = score;
+        this.id = UUID.randomUUID().toString();
+    }
+
     public Grade(){
         this.id = UUID.randomUUID().toString();
     }
+
 }

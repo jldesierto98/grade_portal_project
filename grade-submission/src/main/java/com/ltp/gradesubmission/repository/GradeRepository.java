@@ -1,7 +1,6 @@
 package com.ltp.gradesubmission.repository;
 
-import com.ltp.gradesubmission.Grade;
-import lombok.AllArgsConstructor;
+import com.ltp.gradesubmission.entity.Grade;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
