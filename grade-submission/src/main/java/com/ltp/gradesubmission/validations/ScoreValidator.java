@@ -1,4 +1,4 @@
-package com.ltp.gradesubmission;
+package com.ltp.gradesubmission.validations;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

@@ -2,15 +2,14 @@ package com.ltp.gradesubmission.service;
 
 
 import com.ltp.gradesubmission.Constants;
-import com.ltp.gradesubmission.Grade;
+import com.ltp.gradesubmission.entity.Grade;
 import com.ltp.gradesubmission.repository.GradeRepository;
 import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 @Service
 @AllArgsConstructor
@@ -39,10 +38,12 @@ public class GradeService {
     }
 
     public Integer getGradeIndex(String id){
-        return IntStream.range(0, this.getSize())
-                .filter(i -> this.getGrade(i).getId().equals(id))
-                .findFirst()
-                .orElse(Constants.INDEX_NOT_FOUND);
+
+        //gets the index of grade based on id. scans the getGrades list (mock database)
+       return IntStream.range(0, getGrades().size())
+               .filter(i -> getGrade(i).getId().equals(id))
+               .findFirst()
+               .orElse(Constants.INDEX_NOT_FOUND);
     }
 
     public Grade getGradeById(String id){

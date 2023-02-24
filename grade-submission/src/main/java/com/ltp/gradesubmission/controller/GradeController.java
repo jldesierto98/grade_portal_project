@@ -2,7 +2,7 @@ package com.ltp.gradesubmission.controller;
 
 
 
-import com.ltp.gradesubmission.Grade;
+import com.ltp.gradesubmission.entity.Grade;
 import com.ltp.gradesubmission.service.GradeService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
