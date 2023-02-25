@@ -18,7 +18,7 @@ import javax.validation.Valid;
 @Controller
 @AllArgsConstructor
 public class GradeController {
-    @Autowired
+
     private final GradeService gradeService;
 
     @GetMapping("/grades")

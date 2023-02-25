@@ -1,7 +1,7 @@
 import com.ltp.gradesubmission.Constants;
 import com.ltp.gradesubmission.entity.Grade;
 import com.ltp.gradesubmission.repository.GradeRepository;
-import com.ltp.gradesubmission.service.GradeService;
+import com.ltp.gradesubmission.service.GradeServiceImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -19,8 +19,10 @@ public class GradeServiceTest {
 
     @Mock
     private  GradeRepository gradeRepository;
+
     @InjectMocks
-    private GradeService gradeService;
+    //we should test the implementation instead of the inteface.
+    private GradeServiceImpl gradeService;
 
    @Test
     public void getGradesFromRepoTest(){
