@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class GradeServiceTest {
@@ -47,5 +47,42 @@ public class GradeServiceTest {
 
        assertEquals(0, valid);
        assertEquals(Constants.INDEX_NOT_FOUND, notFound);
+   }
+
+   @Test
+    public void getGradeByIdTest(){
+       Grade grade = new Grade("Test User", "Sub2ject", "C-");
+       when(gradeRepository.getGrades()).thenReturn(Arrays.asList(grade));
+       when(gradeRepository.getGrade(0)).thenReturn(grade);
+
+       Grade testGrade = gradeService.getGradeById(grade.getId());
+       String testName = grade.getName();
+
+       assertEquals(grade, testGrade);
+       assertEquals("Test User", gradeService.getGradeById(grade.getId()).getName());
+   }
+
+   @Test
+    public void submitGradeTest(){
+       Grade grade = new Grade("Test User", "Sub2ject", "C-");
+       when(gradeRepository.getGrades()).thenReturn(Arrays.asList(grade));
+       when(gradeRepository.getGrade(0)).thenReturn(grade);
+
+      Grade testNewGrade = new Grade("New User", "Math", "B+");
+      gradeService.submitGrade(testNewGrade);
+
+      verify(gradeRepository, times(1)).addGrade(testNewGrade);
+   }
+
+   @Test
+    public void upgradeGradeTest(){
+       Grade grade = new Grade("Test User", "Sub2ject", "C-");
+       when(gradeRepository.getGrades()).thenReturn(Arrays.asList(grade));
+       when(gradeRepository.getGrade(0)).thenReturn(grade);
+
+       grade.setScore("B-");
+       gradeService.submitGrade(grade);
+
+       verify(gradeRepository, times(1)).updateGrade(0, grade);
    }
 }
