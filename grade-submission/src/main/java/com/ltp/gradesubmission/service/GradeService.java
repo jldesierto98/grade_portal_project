@@ -5,16 +5,14 @@ import com.ltp.gradesubmission.Constants;
 import com.ltp.gradesubmission.entity.Grade;
 import com.ltp.gradesubmission.repository.GradeRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.IntStream;
 @Service
 @AllArgsConstructor
 public class GradeService {
-    @Autowired
+
     private final GradeRepository gradeRepository;
 
     public Grade getGrade(int index){
