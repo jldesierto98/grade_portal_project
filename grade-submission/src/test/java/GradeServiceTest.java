@@ -38,7 +38,7 @@ public class GradeServiceTest {
 
    @Test
     public void getGradeIndexTest(){
-       Grade grade = new Grade("Harry", "Potions", "C-");
+       Grade grade = new Grade("Test User", "Sub2ject", "C-");
        when(gradeRepository.getGrades()).thenReturn(Arrays.asList(grade));
        when(gradeRepository.getGrade(0)).thenReturn(grade);
 
