@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface GradeRepository extends CrudRepository<Grade, Long> {
-
+    Grade findByStudentId(Long studentId);
 }

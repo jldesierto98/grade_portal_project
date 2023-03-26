@@ -4,7 +4,6 @@ import com.ltp.gradesubmission.validations.Score;
 import lombok.*;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
 
 @Getter
 @Setter
