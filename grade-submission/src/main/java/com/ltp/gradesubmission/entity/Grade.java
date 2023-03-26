@@ -3,33 +3,34 @@ package com.ltp.gradesubmission.entity;
 import com.ltp.gradesubmission.validations.Score;
 import lombok.*;
 
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import java.util.UUID;
 
 @Getter
 @Setter
 @ToString
+@Entity
+@Table(name = "grade")
 public class Grade {
 
-    @NotBlank(message = "Name cannot be left blank or empty!")
-    private String name;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private long id;
 
-    @NotBlank(message = "Do not leave the subject empty!")
-    private String subject;
+//    @Column(name = "name")
+//    @NotBlank(message = "Name cannot be left blank or empty!")
+//    private String name;
 
+//    @Column(name = "subject")
+//    @NotBlank(message = "Do not leave the subject empty!")
+//    private String subject;
+
+    @Column(name = "score")
     @Score(message = "Please Enter Valid Score Value")
     private String score;
-    private String id;
 
-    public Grade(String name, String subject, String score){
-        this.name = name;
-        this.subject = subject;
-        this.score = score;
-        this.id = UUID.randomUUID().toString();
-    }
-
-    public Grade(){
-        this.id = UUID.randomUUID().toString();
-    }
-
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "student_id", referencedColumnName = "id")
+    private Student student;
 }

@@ -3,17 +3,25 @@ package com.ltp.gradesubmission.service;
 import com.ltp.gradesubmission.entity.Student;
 import com.ltp.gradesubmission.repository.StudentRepository;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.hibernate.service.spi.ServiceException;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
+
+@Service
 @AllArgsConstructor
 public class StudentServiceImpl implements StudentService {
 
-    @Autowired
+
     private final StudentRepository studentRepository;
     @Override
     public Student getStudent(Long id) {
-        return studentRepository.findById(id).get();
+
+       if(studentRepository.findById(id).isEmpty()){
+            throw new ServiceException("Not found!");
+        }
+
+        return  studentRepository.findById(id).get();
     }
 
     @Override
@@ -23,11 +31,11 @@ public class StudentServiceImpl implements StudentService {
 
     @Override
     public void deleteStudent(Long id) {
-        studentRepository.deleteById(id);
+         studentRepository.deleteById(id);
     }
 
     @Override
     public List<Student> getStudents() {
-        return null;
+        return (List<Student>)studentRepository.findAll();
     }
 }

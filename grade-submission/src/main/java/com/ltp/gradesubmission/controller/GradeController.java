@@ -1,8 +1,12 @@
 package com.ltp.gradesubmission.controller;
 
 import com.ltp.gradesubmission.entity.Grade;
+import com.ltp.gradesubmission.entity.Student;
+import com.ltp.gradesubmission.repository.StudentRepository;
 import com.ltp.gradesubmission.service.GradeService;
 import lombok.AllArgsConstructor;
+import org.hibernate.service.spi.ServiceException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -14,8 +18,10 @@ import java.util.List;
 @AllArgsConstructor
 @RequestMapping(path = "/grade")
 public class GradeController {
-
+    @Autowired
     private final GradeService gradeService;
+    @Autowired
+    private final StudentRepository studentRepository;
 
     @GetMapping("/student/{studentId}/course/{courseId}")
     public ResponseEntity<Grade> getGrade(@PathVariable Long studentId, @PathVariable Long courseId){
@@ -24,7 +30,9 @@ public class GradeController {
 
     @PostMapping("/student/{studentId}/course/{courseId}")
     public ResponseEntity<Grade> saveGrade(@RequestBody Grade grade, @PathVariable Long studentId, @PathVariable Long courseId){
-        return new ResponseEntity<Grade>(grade, HttpStatus.OK);
+            Student student = studentRepository.findById(studentId).orElseThrow(() -> new ServiceException("Student Not Found!"));
+            grade.setStudent(student);
+            return new ResponseEntity<Grade>(gradeService.saveGrade(grade, studentId, courseId), HttpStatus.OK);
     }
 
     @PutMapping("/student/{studentId}/course/{courseId}")
