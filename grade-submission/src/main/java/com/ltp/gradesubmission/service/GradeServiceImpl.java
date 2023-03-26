@@ -4,10 +4,12 @@ import com.ltp.gradesubmission.Constants;
 import com.ltp.gradesubmission.entity.Grade;
 import com.ltp.gradesubmission.repository.GradeRepository;
 import lombok.AllArgsConstructor;
+import org.hibernate.service.spi.ServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.IntStream;
 
 
@@ -18,8 +20,9 @@ public class GradeServiceImpl implements GradeService {
     GradeRepository gradeRepository;
 
     @Override
-    public Grade getGrade(Long id) {
-        return null;
+    public Grade getGrade(Long studentId, Long courseId) {
+        return Optional.of(gradeRepository.findByStudentId(studentId))
+                .orElseThrow(() -> new ServiceException("Student not found!"));
     }
 
     @Override
@@ -36,4 +39,5 @@ public class GradeServiceImpl implements GradeService {
     public Grade updateGrade() {
         return null;
     }
+
 }
