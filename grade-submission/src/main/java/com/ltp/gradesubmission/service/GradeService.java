@@ -9,13 +9,14 @@ import java.util.List;
 
 public interface GradeService {
 
-    public List<Grade> getGrades();
+  Grade getGrade(Long id);
 
-    public Integer getGradeIndex(String id);
+  Grade saveGrade(Grade grade, Long studentId, Long courseId);
 
-    public Grade getGradeById(String id);
+  void deleteGrade();
 
-    public void submitGrade(Grade grade);
+  Grade updateGrade();
+
 }
 
 
