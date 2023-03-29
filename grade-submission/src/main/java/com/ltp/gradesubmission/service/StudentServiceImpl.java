@@ -20,7 +20,7 @@ public class StudentServiceImpl implements StudentService {
        if(studentRepository.findById(id).isEmpty()){
             throw new ServiceException("Not found!");
         }
-
+        this.printGrades(studentRepository.findById(id).get());
         return  studentRepository.findById(id).get();
     }
 
@@ -37,5 +37,10 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public List<Student> getStudents() {
         return (List<Student>)studentRepository.findAll();
+    }
+
+    @Override
+    public void printGrades(Student student) {
+        student.getGrade().forEach(x -> System.out.println(x.getScore()));
     }
 }
