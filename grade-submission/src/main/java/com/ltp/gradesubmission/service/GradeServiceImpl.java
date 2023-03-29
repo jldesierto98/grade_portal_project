@@ -15,7 +15,7 @@ import java.util.Optional;
 @AllArgsConstructor
 @Service
 public class GradeServiceImpl implements GradeService {
-    @Autowired
+
     GradeRepository gradeRepository;
 
     @Override

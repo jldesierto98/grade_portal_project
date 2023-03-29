@@ -18,9 +18,8 @@ import java.util.List;
 @AllArgsConstructor
 @RequestMapping(path = "/grade")
 public class GradeController {
-    @Autowired
+
     private final GradeService gradeService;
-    @Autowired
     private final StudentRepository studentRepository;
 
     @GetMapping("/student/{studentId}/course/{courseId}")
