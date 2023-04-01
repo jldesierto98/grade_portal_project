@@ -71,4 +71,9 @@ public class GradeServiceImpl implements GradeService {
             throw new GradeNotFoundException(studentId, courseId);
         }
     }
+
+    @Override
+    public List<Grade> getAllGrades() {
+        return (List<Grade>) gradeRepository.findAll();
+    }
 }

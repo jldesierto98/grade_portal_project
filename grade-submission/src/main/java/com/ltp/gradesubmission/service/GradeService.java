@@ -17,6 +17,8 @@ public interface GradeService {
   List<Grade> getStudentGrades(Long studentId);
 
   List<Grade> getCourseGrades(Long courseId);
+
+  List<Grade> getAllGrades();
 }
 
 
