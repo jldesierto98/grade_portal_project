@@ -17,19 +17,15 @@ public class Grade {
     @Column(name = "id")
     private long id;
 
-//    @Column(name = "name")
-//    @NotBlank(message = "Name cannot be left blank or empty!")
-//    private String name;
-
-//    @Column(name = "subject")
-//    @NotBlank(message = "Do not leave the subject empty!")
-//    private String subject;
-
     @Column(name = "score")
-    @Score(message = "Please Enter Valid Score Value")
+//    @Score(message = "Please Enter Valid Score Value")
     private String score;
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "student_id", referencedColumnName = "id")
     private Student student;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "course_id", referencedColumnName = "id")
+    private Course course;
 }
