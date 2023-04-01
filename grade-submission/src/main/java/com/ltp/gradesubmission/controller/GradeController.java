@@ -51,6 +51,6 @@ public class GradeController {
 
     @GetMapping("/all")
     public ResponseEntity<List<Grade>> getAllGrades(){
-        return new ResponseEntity<>(HttpStatus.OK);
+        return new ResponseEntity<>(gradeService.getAllGrades(), HttpStatus.OK);
     }
 }

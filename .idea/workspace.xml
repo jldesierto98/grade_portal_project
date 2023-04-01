@@ -4,26 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64dc33a2-3b42-401c-9671-860d82c4cd12" name="Changes" comment="Autowire Refactoring">
-      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/exceptions/CourseNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/exceptions/GradeNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/exceptions/StudentNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/repository/CourseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grade-submission/src/test/java/com/ltp/gradesubmission/TestCase.java" afterDir="false" />
+    <list default="true" id="64dc33a2-3b42-401c-9671-860d82c4cd12" name="Changes" comment="Finzalization code commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/GradeSubmissionApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/GradeSubmissionApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/controller/CourseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/controller/CourseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/controller/GradeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/controller/GradeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/entity/Course.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/entity/Grade.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/entity/Grade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/repository/GradeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/repository/GradeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/CourseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/CourseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/CourseServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/CourseServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/GradeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/GradeService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/GradeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/GradeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/StudentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/StudentServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grade-submission/src/test/java/GradeServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/test/java/GradeServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -274,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680096595307</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Finzalization code commit">
+      <created>1680342975799</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1680342975799</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -300,6 +293,7 @@
     <MESSAGE value="Repository and Service Code" />
     <MESSAGE value="Database/Persistence Code Commit" />
     <MESSAGE value="Autowire Refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Autowire Refactoring" />
+    <MESSAGE value="Finzalization code commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finzalization code commit" />
   </component>
 </project>
