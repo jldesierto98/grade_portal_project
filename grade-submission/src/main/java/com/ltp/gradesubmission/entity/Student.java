@@ -31,4 +31,8 @@ public class Student {
     @JsonIgnore
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL)
     private List<Grade> grade;
+
+    @JsonIgnore
+    @ManyToMany(mappedBy = "students")
+    private List<Course> courses;
 }

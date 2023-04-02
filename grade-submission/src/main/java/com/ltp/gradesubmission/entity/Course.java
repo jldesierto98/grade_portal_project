@@ -34,4 +34,14 @@ public class Course {
     @JsonIgnore
     @OneToMany(mappedBy = "course", cascade = CascadeType.ALL)
     private List<Grade> grade;
+
+    @JsonIgnore
+    @ManyToMany
+    @JoinTable(
+            name = "course_student",
+            joinColumns = @JoinColumn(name = "course_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "student_id", referencedColumnName = "id")
+    )
+    private List<Student> students;
+
 }

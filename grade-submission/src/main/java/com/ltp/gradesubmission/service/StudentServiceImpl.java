@@ -1,7 +1,9 @@
 package com.ltp.gradesubmission.service;
 
+import com.ltp.gradesubmission.entity.Course;
 import com.ltp.gradesubmission.entity.Student;
 import com.ltp.gradesubmission.exceptions.StudentNotFoundException;
+import com.ltp.gradesubmission.repository.CourseRepository;
 import com.ltp.gradesubmission.repository.StudentRepository;
 import lombok.AllArgsConstructor;
 import org.hibernate.service.spi.ServiceException;
@@ -16,6 +18,7 @@ public class StudentServiceImpl implements StudentService {
 
 
     private final StudentRepository studentRepository;
+    private final CourseRepository courseRepository;
 
 
     @Override
@@ -46,6 +49,27 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public void printGrades(Student student) {
         student.getGrade().forEach(x -> System.out.println(x.getScore()));
+    }
+
+    @Override
+    public Course addStudentToCourse(Long studentId, Long courseId) {
+        Student student = StudentServiceImpl.unWrap(studentRepository.findById(studentId), studentId);
+        Course course = CourseServiceImpl.unWrap(courseRepository.findById(courseId), courseId);
+
+        course.getStudents().add(student);
+        return courseRepository.save(course);
+    }
+
+    @Override
+    public List<Student> getStudentsEnrolledInCourse(Long studentId) {
+        Course course = CourseServiceImpl.unWrap(courseRepository.findById(studentId), studentId);
+        return course.getStudents();
+    }
+
+    @Override
+    public List<Course> getEnrolledCoursesOfStudent(Long studentId) {
+        Student student = StudentServiceImpl.unWrap(studentRepository.findById(studentId), studentId);
+        return student.getCourses();
     }
 
     static Student unWrap(Optional<Student> student, Long id){

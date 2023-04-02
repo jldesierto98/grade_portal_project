@@ -1,5 +1,6 @@
 package com.ltp.gradesubmission.controller;
 
+import com.ltp.gradesubmission.entity.Course;
 import com.ltp.gradesubmission.entity.Student;
 import com.ltp.gradesubmission.service.StudentService;
 import lombok.AllArgsConstructor;
@@ -38,5 +39,20 @@ public class StudentController {
     @GetMapping("/all")
     public ResponseEntity<List<Student>> getAllStudent(){
         return new ResponseEntity<>(studentService.getStudents(), HttpStatus.OK);
+    }
+
+    @PutMapping("/{studentId}/course/{courseId}")
+    public ResponseEntity<Course> enrollStudent(@PathVariable Long studentId, @PathVariable Long courseId){
+        return new ResponseEntity<>(studentService.addStudentToCourse(studentId, courseId), HttpStatus.ACCEPTED);
+    }
+
+    @GetMapping("/course/{courseId}/enrolledCourses")
+    public ResponseEntity<List<Student>> getEnrolledStudents(@PathVariable Long courseId){
+        return new ResponseEntity<>(studentService.getStudentsEnrolledInCourse(courseId), HttpStatus.OK);
+    }
+
+    @GetMapping("/{studentId}/enrolledCourses")
+    public ResponseEntity<List<Course>> getEnrolledCourses(@PathVariable Long studentId){
+        return new ResponseEntity<>(studentService.getEnrolledCoursesOfStudent(studentId), HttpStatus.OK);
     }
 }
