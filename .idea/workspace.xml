@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64dc33a2-3b42-401c-9671-860d82c4cd12" name="Changes" comment="Student Not Enrolled Validation Commit">
-      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/ApplicationExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/exceptions/ErrorResponse.java" afterDir="false" />
+    <list default="true" id="64dc33a2-3b42-401c-9671-860d82c4cd12" name="Changes" comment="Exception Handling Improvement Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/ApplicationExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/ApplicationExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/entity/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680449651187</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Exception Handling Improvement Commit">
+      <created>1680790568378</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1680790568378</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -315,6 +322,7 @@
     <MESSAGE value="Finzalization code commit" />
     <MESSAGE value="grade and course relationship commit" />
     <MESSAGE value="Student Not Enrolled Validation Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Student Not Enrolled Validation Commit" />
+    <MESSAGE value="Exception Handling Improvement Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Exception Handling Improvement Commit" />
   </component>
 </project>
