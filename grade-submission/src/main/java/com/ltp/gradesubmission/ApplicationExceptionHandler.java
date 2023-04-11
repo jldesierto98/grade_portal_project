@@ -1,6 +1,7 @@
 package com.ltp.gradesubmission;
 
 
+import com.ltp.gradesubmission.exceptions.EntityNotFoundException;
 import com.ltp.gradesubmission.exceptions.ErrorResponse;
 import com.ltp.gradesubmission.exceptions.StudentNotEnrolledError;
 import com.ltp.gradesubmission.exceptions.StudentNotFoundException;
@@ -42,6 +43,12 @@ public class    ApplicationExceptionHandler {
     @ExceptionHandler(DataIntegrityViolationException.class)
     public ResponseEntity<Object> handleDataIntegrityViolationException(DataIntegrityViolationException ex) {
         ErrorResponse error = new ErrorResponse(Arrays.asList("Data Integrity Violation: we cannot process your request."));
+        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
+    }
+
+    @ExceptionHandler(EntityNotFoundException.class)
+    public ResponseEntity<Object> handleEntityNotFoundException(DataIntegrityViolationException ex) {
+        ErrorResponse error = new ErrorResponse(Arrays.asList("Data Entity Not Found!"));
         return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
     }
 }
