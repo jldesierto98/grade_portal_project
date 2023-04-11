@@ -4,10 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64dc33a2-3b42-401c-9671-860d82c4cd12" name="Changes" comment="Exception Handling Improvement Commit">
+    <list default="true" id="64dc33a2-3b42-401c-9671-860d82c4cd12" name="Changes" comment="Data Integrity Issue Fix (Delete Student Bug)">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_auth0_java_jwt_4_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_29.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_7_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_7_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_7_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_7_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_7_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/controller/UserController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/exceptions/EntityNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/repository/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/security/SecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/security/SecurityConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/security/filter/AuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/security/filter/ExceptionHandlerFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/security/filter/JwtAuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/security/manager/CustomAuthenticationManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grade-submission/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/ApplicationExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/ApplicationExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/GradeSubmissionApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/GradeSubmissionApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/controller/StudentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grade-submission/src/test/java/com/ltp/gradesubmission/TestCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/test/java/com/ltp/gradesubmission/TestCase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +82,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/desiertofam22/Desktop/Grade Portal Project&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
@@ -69,7 +93,21 @@
       <recent name="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/exceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.GradeSubmissionApplication">
+  <component name="RestServicesNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="Found 18 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+        </path>
+        <path>
+          <item name="Found 18 services " type="fcff1e1b:RestServiceStructure$RootNode" />
+          <item name="grade-submission" type="c588b436:RestServiceStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="RunManager">
     <configuration name="GradeSubmissionApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ltp.gradesubmission.GradeSubmissionApplication" />
       <module name="grade-submission" />
@@ -293,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680790568378</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Data Integrity Issue Fix (Delete Student Bug)">
+      <created>1680792436990</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1680792436990</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -323,6 +368,53 @@
     <MESSAGE value="grade and course relationship commit" />
     <MESSAGE value="Student Not Enrolled Validation Commit" />
     <MESSAGE value="Exception Handling Improvement Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exception Handling Improvement Commit" />
+    <MESSAGE value="Data Integrity Issue Fix (Delete Student Bug)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Data Integrity Issue Fix (Delete Student Bug)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/grade-submission/src/test/java/com/ltp/gradesubmission/TestCase.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/grade-submission/src/test/java/com/ltp/gradesubmission/TestCase.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/grade-submission/src/test/java/com/ltp/gradesubmission/TestCase.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/grade-submission/src/test/java/com/ltp/gradesubmission/TestCase.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/grade-submission/src/test/java/com/ltp/gradesubmission/TestCase.java</url>
+          <line>16</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/grade-submission/src/test/java/com/ltp/gradesubmission/TestCase.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/grade-submission/src/test/java/com/ltp/gradesubmission/TestCase.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/grade-submission/src/test/java/com/ltp/gradesubmission/TestCase.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
