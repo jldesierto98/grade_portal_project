@@ -42,13 +42,10 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
     protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authResult) throws IOException, ServletException {
         String token = JWT.create()
                 .withSubject(authResult.getName())
-                        .withExpiresAt(new Date(System.currentTimeMillis() + SecurityConstants.TOKEN_EXPIRATION * 1000))
+                        .withExpiresAt(new Date(System.currentTimeMillis() + SecurityConstants.TOKEN_EXPIRATION))
                                 .sign(Algorithm.HMAC512(SecurityConstants.SECRET_KEY));
 
         response.addHeader(SecurityConstants.AUTHORIZATION, SecurityConstants.BEARER + token);
-        response.setStatus(HttpServletResponse.SC_ACCEPTED);
-
-        log.info("AuthenticationFilter ____ AUTHENTICATION SUCCESS ____ {}", authResult.getDetails().toString());
 
     }
 
