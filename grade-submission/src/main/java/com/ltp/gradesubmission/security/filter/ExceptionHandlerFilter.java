@@ -1,5 +1,6 @@
 package com.ltp.gradesubmission.security.filter;
 
+import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.ltp.gradesubmission.exceptions.EntityNotFoundException;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -18,6 +19,10 @@ public class ExceptionHandlerFilter extends OncePerRequestFilter {
             }catch (EntityNotFoundException e){
                 response.setStatus(HttpServletResponse.SC_NOT_FOUND);
                 response.getWriter().write("Username does not exist!");
+                response.getWriter().flush();
+            }catch (JWTVerificationException e){
+                response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+                response.getWriter().write("Forbidden Access!");
                 response.getWriter().flush();
             }
             catch (RuntimeException e) {

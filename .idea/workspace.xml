@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64dc33a2-3b42-401c-9671-860d82c4cd12" name="Changes" comment="Spring Security Feature Commit &#10;&#10;-&gt; User Sign Up Feature&#10;-&gt; User Login Feature&#10;-&gt; JWT Token Generation (For User Authentication)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/security/filter/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/security/filter/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/security/filter/JwtAuthenticationFilter.java" beforeDir="false" />
+    <list default="true" id="64dc33a2-3b42-401c-9671-860d82c4cd12" name="Changes" comment="Fixed Bug:&#10;&#10;-&gt; Bad Request Error is thrown even if the username and password is correct. Cause: getting the details in log is null causing it to throw null pointer exception.&#10;&#10;-&gt; NEW FEATURE: JWT TOKEN FOR IS GIVEN FOR AUTHENTICATED USER.">
+      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/security/filter/ExceptionHandlerFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/security/filter/ExceptionHandlerFilter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -294,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680790568378</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Fixed Bug:&#10;&#10;-&gt; Bad Request Error is thrown even if the username and password is correct. Cause: getting the details in log is null causing it to throw null pointer exception.&#10;&#10;-&gt; NEW FEATURE: JWT TOKEN FOR IS GIVEN FOR AUTHENTICATED USER.">
+      <created>1681545732747</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1681545732747</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -324,7 +328,8 @@
     <MESSAGE value="grade and course relationship commit" />
     <MESSAGE value="Student Not Enrolled Validation Commit" />
     <MESSAGE value="Exception Handling Improvement Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Exception Handling Improvement Commit" />
+    <MESSAGE value="Fixed Bug:&#10;&#10;-&gt; Bad Request Error is thrown even if the username and password is correct. Cause: getting the details in log is null causing it to throw null pointer exception.&#10;&#10;-&gt; NEW FEATURE: JWT TOKEN FOR IS GIVEN FOR AUTHENTICATED USER." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed Bug:&#10;&#10;-&gt; Bad Request Error is thrown even if the username and password is correct. Cause: getting the details in log is null causing it to throw null pointer exception.&#10;&#10;-&gt; NEW FEATURE: JWT TOKEN FOR IS GIVEN FOR AUTHENTICATED USER." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -376,12 +381,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/security/filter/ExceptionHandlerFilter.java</url>
-          <line>23</line>
+          <line>25</line>
           <option name="timeStamp" value="97" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/security/filter/ExceptionHandlerFilter.java</url>
-          <line>24</line>
+          <line>26</line>
           <option name="timeStamp" value="98" />
         </line-breakpoint>
       </breakpoints>
