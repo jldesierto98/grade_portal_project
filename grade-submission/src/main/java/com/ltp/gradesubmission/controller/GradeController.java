@@ -1,6 +1,9 @@
 package com.ltp.gradesubmission.controller;
 
 import com.ltp.gradesubmission.entity.Grade;
+import com.ltp.gradesubmission.request.SaveGradeRequest;
+import com.ltp.gradesubmission.request.UpdateGradeRequest;
+import com.ltp.gradesubmission.response.UpdateGradeResponse;
 import com.ltp.gradesubmission.service.GradeService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,13 +27,13 @@ public class GradeController {
     }
 
     @PostMapping("/student/{studentId}/course/{courseId}")
-    public ResponseEntity<Grade> saveGrade(@RequestBody Grade grade, @PathVariable Long studentId, @PathVariable Long courseId){
-            return new ResponseEntity<Grade>(gradeService.saveGrade(grade, studentId, courseId), HttpStatus.OK);
+    public ResponseEntity<Grade> saveGrade(@RequestBody SaveGradeRequest saveGradeRequest, @PathVariable Long studentId, @PathVariable Long courseId){
+            return new ResponseEntity<>(gradeService.saveGrade(saveGradeRequest, studentId, courseId), HttpStatus.OK);
     }
 
     @PutMapping("/student/{studentId}/course/{courseId}")
-    public ResponseEntity<Grade> updateGrade(@RequestBody Grade grade, @PathVariable Long studentId, @PathVariable Long courseId){
-        return new ResponseEntity<Grade>(gradeService.updateGrade(grade.getScore(), studentId, courseId), HttpStatus.OK);
+    public ResponseEntity<UpdateGradeResponse> updateGrade(@RequestBody UpdateGradeRequest grade, @PathVariable Long studentId, @PathVariable Long courseId){
+        return new ResponseEntity<>(gradeService.updateGrade(grade.getScore(), studentId, courseId), HttpStatus.OK);
     }
 
     @DeleteMapping("/student/{studentId}/course/{courseId}")
