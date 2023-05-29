@@ -23,6 +23,7 @@ public class UserController {
         return new ResponseEntity<>(userService.getUser(id), HttpStatus.OK);
     }
 
+    //TODO: make a request object for register user. Do not pass in the entity directly.
     @PostMapping("/register")
     public ResponseEntity<User> createUser(@Valid @RequestBody User user){
         return new ResponseEntity<>(userService.saveUser(user), HttpStatus.CREATED);

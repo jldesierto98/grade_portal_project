@@ -9,6 +9,8 @@ import com.ltp.gradesubmission.exceptions.StudentNotEnrolledError;
 import com.ltp.gradesubmission.repository.CourseRepository;
 import com.ltp.gradesubmission.repository.GradeRepository;
 import com.ltp.gradesubmission.repository.StudentRepository;
+import com.ltp.gradesubmission.request.SaveGradeRequest;
+import com.ltp.gradesubmission.response.UpdateGradeResponse;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -32,7 +34,7 @@ public class GradeServiceImpl implements GradeService {
     }
 
     @Override
-    public Grade saveGrade(Grade grade, Long studentId, Long courseId) {
+    public Grade saveGrade(SaveGradeRequest saveGradeRequest, Long studentId, Long courseId) {
 
         Student student = StudentServiceImpl.unWrap(studentRepository.findById(studentId), studentId);
         Course course = CourseServiceImpl.unWrap(courseRepository.findById(courseId), courseId);
@@ -41,6 +43,7 @@ public class GradeServiceImpl implements GradeService {
             throw new StudentNotEnrolledError(studentId, courseId);
         }
 
+        Grade grade = new Grade();
         grade.setStudent(student);
         grade.setCourse(course);
         return gradeRepository.save(grade);
@@ -53,11 +56,21 @@ public class GradeServiceImpl implements GradeService {
     }
 
     @Override
-    public Grade updateGrade(String score, Long studentId, Long courseId) {
-        Optional<Grade> grade = Optional.ofNullable(gradeRepository.findByStudentIdAndCourseId(studentId, courseId));
-        Grade updatedGrade = unWrap(grade, studentId, courseId);
-        updatedGrade.setScore(score);
-        return  gradeRepository.save(updatedGrade);
+    public UpdateGradeResponse updateGrade(String score, Long studentId, Long courseId) {
+        Grade grade = gradeRepository.findByStudentIdAndCourseId(studentId, courseId);
+        grade.setScore(score);
+        gradeRepository.save(grade);
+
+        //check if update is successful.
+        boolean isUpdated = grade.getScore().equals(score);
+        String message = isUpdated ? "Update Successful" : "Update Failed";
+
+        //build UpdateGradeResponse
+        UpdateGradeResponse updateGradeResponse = new UpdateGradeResponse();
+        updateGradeResponse.setIsUpdated(isUpdated);
+        updateGradeResponse.setMessage(message);
+
+        return updateGradeResponse;
     }
 
     @Override
