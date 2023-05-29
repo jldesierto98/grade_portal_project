@@ -20,5 +20,4 @@ public interface GradeRepository extends CrudRepository<Grade, Long> {
 
     List<Grade> findByCourseId(Long courseId);
 
-    Boolean saveEntity(Grade grade);
 }
