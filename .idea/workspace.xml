@@ -4,52 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64dc33a2-3b42-401c-9671-860d82c4cd12" name="Changes" comment="Fixed Bug:&#10;&#10;-&gt; Bad Request Error is thrown even if the username and password is correct. Cause: getting the details in log is null causing it to throw null pointer exception.&#10;&#10;-&gt; NEW FEATURE: JWT TOKEN FOR IS GIVEN FOR AUTHENTICATED USER.">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_damnhandy_handy_uri_templates_2_1_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_everit_org_json_schema_org_everit_json_schema_1_14_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_10_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_re2j_re2j_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_digester_commons_digester_1_8_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_validator_commons_validator_1_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_continual_continualAssembly_0_2_47.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_continual_continualIam_0_2_47.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_continual_continualJsonHttpClient_0_2_47.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_continual_continualMetricsDropWiz_0_2_47.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_continual_continualMetrics_0_2_47.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_continual_continualModel_0_2_47.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_continual_continualProcessor_0_2_47.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_continual_continualUtil_0_2_47.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_continual_cpModel_0_2_47.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jline_jline_2_11.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_10_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_csv_1_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20180130.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/constant/ProjectConstant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/controller/ProcessAudioController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/entity/Transcript.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/request/AudioProcessRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/request/SaveGradeRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/request/UpdateGradeRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/response/AssemblyResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/response/UpdateGradeResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/AssemblyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/AssemblyServiceImpl.java" afterDir="false" />
+    <list default="true" id="64dc33a2-3b42-401c-9671-860d82c4cd12" name="Changes" comment="Refactor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grade-submission/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/controller/GradeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/controller/GradeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/controller/StudentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/repository/CourseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/repository/CourseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/controller/ProcessAudioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/controller/ProcessAudioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/entity/Transcript.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/entity/Transcript.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/repository/GradeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/repository/GradeRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/security/filter/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/security/filter/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/GradeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/GradeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/GradeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/GradeServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/AssemblyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/AssemblyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/AssemblyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/AssemblyServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -343,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681545732747</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Refactor">
+      <created>1685341725807</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1685341725807</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -374,7 +343,8 @@
     <MESSAGE value="Student Not Enrolled Validation Commit" />
     <MESSAGE value="Exception Handling Improvement Commit" />
     <MESSAGE value="Fixed Bug:&#10;&#10;-&gt; Bad Request Error is thrown even if the username and password is correct. Cause: getting the details in log is null causing it to throw null pointer exception.&#10;&#10;-&gt; NEW FEATURE: JWT TOKEN FOR IS GIVEN FOR AUTHENTICATED USER." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Bug:&#10;&#10;-&gt; Bad Request Error is thrown even if the username and password is correct. Cause: getting the details in log is null causing it to throw null pointer exception.&#10;&#10;-&gt; NEW FEATURE: JWT TOKEN FOR IS GIVEN FOR AUTHENTICATED USER." />
+    <MESSAGE value="Refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
