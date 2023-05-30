@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64dc33a2-3b42-401c-9671-860d82c4cd12" name="Changes" comment="Refactor">
+    <list default="true" id="64dc33a2-3b42-401c-9671-860d82c4cd12" name="Changes" comment="Assembly AI Integration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/constant/ProjectConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/constant/ProjectConstant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/controller/ProcessAudioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/controller/ProcessAudioController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/entity/Transcript.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/entity/Transcript.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/repository/GradeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/repository/GradeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/request/AudioProcessRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/request/AudioProcessRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/response/AssemblyResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/response/AssemblyResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/security/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/AssemblyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/AssemblyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/AssemblyServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/grade-submission/src/main/java/com/ltp/gradesubmission/service/AssemblyServiceImpl.java" afterDir="false" />
@@ -312,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685341725807</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Assembly AI Integration">
+      <created>1685350580589</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1685350580589</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -344,7 +352,8 @@
     <MESSAGE value="Exception Handling Improvement Commit" />
     <MESSAGE value="Fixed Bug:&#10;&#10;-&gt; Bad Request Error is thrown even if the username and password is correct. Cause: getting the details in log is null causing it to throw null pointer exception.&#10;&#10;-&gt; NEW FEATURE: JWT TOKEN FOR IS GIVEN FOR AUTHENTICATED USER." />
     <MESSAGE value="Refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor" />
+    <MESSAGE value="Assembly AI Integration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Assembly AI Integration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

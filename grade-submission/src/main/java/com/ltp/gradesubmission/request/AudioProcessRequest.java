@@ -7,4 +7,5 @@ import lombok.Setter;
 @Setter
 public class AudioProcessRequest {
     private String audio_url;
+    private String token;
 }

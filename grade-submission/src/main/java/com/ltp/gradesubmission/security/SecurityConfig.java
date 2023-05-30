@@ -34,6 +34,7 @@ public class SecurityConfig {
                 .antMatchers("/h2/**").permitAll()//for testing purpose only, to allow H2 Access.
                 .antMatchers(HttpMethod.POST, SecurityConstants.REGISTER_PATH).permitAll() //allows all registration, no authentication needed.
                 .antMatchers(HttpMethod.POST, "/audio/processAudio").permitAll()
+                .antMatchers(HttpMethod.GET, "/audio/audioToText/**").permitAll()
                 .anyRequest().authenticated() //any other request are protected.
                 .and()
                 .addFilterBefore(new ExceptionHandlerFilter(), AuthenticationFilter.class)
