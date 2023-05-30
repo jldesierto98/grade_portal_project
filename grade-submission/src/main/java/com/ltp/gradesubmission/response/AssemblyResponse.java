@@ -13,4 +13,6 @@ public class AssemblyResponse {
 
     private String text;
 
+    String id;
+
 }
